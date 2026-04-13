@@ -1,0 +1,5538 @@
+{
+  "protocol_id": "final_v3_robustness",
+  "base_protocol": "final_v2_main",
+  "lambda_sweep": [
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "lambda_pi": 0.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "lambda_pi": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "lambda_pi": 0.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "lambda_pi": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "lambda_pi": 0.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "lambda_pi": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "lambda_pi": 0.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "lambda_pi": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "lambda_pi": 0.5,
+      "prereq_retention": {
+        "mean": 0.8,
+        "std": 0.3162
+      },
+      "full_chain_retention": {
+        "mean": 0.6667,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.6667,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 0.9,
+        "std": 0.207
+      },
+      "full_chain_retention": {
+        "mean": 0.8,
+        "std": 0.414
+      },
+      "answer_acc": {
+        "mean": 0.8,
+        "std": 0.414
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "lambda_pi": 2.0,
+      "prereq_retention": {
+        "mean": 0.9333,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.8667,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.8667,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 0.1333,
+        "std": 0.2968
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 0.1333,
+        "std": 0.2968
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "lambda_pi": 0.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "lambda_pi": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 0.6667,
+        "std": 0.244
+      },
+      "full_chain_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 0.6667,
+        "std": 0.244
+      },
+      "full_chain_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "lambda_pi": 0.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "lambda_pi": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "lambda_pi": 0.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "lambda_pi": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 0.5667,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "lambda_pi": 1.0,
+      "prereq_retention": {
+        "mean": 0.5667,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    }
+  ],
+  "budget_curve": [
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.4667,
+        "std": 0.5164
+      },
+      "full_chain_retention": {
+        "mean": 0.4667,
+        "std": 0.5164
+      },
+      "answer_acc": {
+        "mean": 0.4667,
+        "std": 0.5164
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.4667,
+        "std": 0.5164
+      },
+      "full_chain_retention": {
+        "mean": 0.4667,
+        "std": 0.5164
+      },
+      "answer_acc": {
+        "mean": 0.4667,
+        "std": 0.5164
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 0.4,
+        "std": 0.5071
+      },
+      "full_chain_retention": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 0.6,
+        "std": 0.5071
+      },
+      "full_chain_retention": {
+        "mean": 0.2,
+        "std": 0.414
+      },
+      "answer_acc": {
+        "mean": 0.2,
+        "std": 0.414
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.52,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.52,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.52,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 1.52,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 0.5333,
+        "std": 0.5164
+      },
+      "full_chain_retention": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 0.6,
+        "std": 0.5071
+      },
+      "full_chain_retention": {
+        "mean": 0.2,
+        "std": 0.414
+      },
+      "answer_acc": {
+        "mean": 0.2,
+        "std": 0.414
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.52,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.52,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.52,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.8667,
+        "std": 0.2289
+      },
+      "full_chain_retention": {
+        "mean": 0.5333,
+        "std": 0.5164
+      },
+      "answer_acc": {
+        "mean": 0.5333,
+        "std": 0.5164
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.7333,
+        "std": 0.2582
+      },
+      "full_chain_retention": {
+        "mean": 0.4,
+        "std": 0.5071
+      },
+      "answer_acc": {
+        "mean": 0.4,
+        "std": 0.5071
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5092,
+        "std": 0.0089
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 0.9,
+        "std": 0.207
+      },
+      "full_chain_retention": {
+        "mean": 0.8,
+        "std": 0.414
+      },
+      "answer_acc": {
+        "mean": 0.8,
+        "std": 0.414
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 0.9667,
+        "std": 0.1291
+      },
+      "full_chain_retention": {
+        "mean": 0.9333,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.9333,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.2667,
+        "std": 0.32
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5092,
+        "std": 0.0089
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 0.1333,
+        "std": 0.2968
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 0.5667,
+        "std": 0.3716
+      },
+      "full_chain_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 0.7,
+        "std": 0.414
+      },
+      "full_chain_retention": {
+        "mean": 0.6,
+        "std": 0.5071
+      },
+      "answer_acc": {
+        "mean": 0.6,
+        "std": 0.5071
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.2667,
+        "std": 0.32
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5092,
+        "std": 0.0089
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 0.1333,
+        "std": 0.2968
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 0.5667,
+        "std": 0.3716
+      },
+      "full_chain_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 0.7,
+        "std": 0.414
+      },
+      "full_chain_retention": {
+        "mean": 0.6,
+        "std": 0.5071
+      },
+      "answer_acc": {
+        "mean": 0.6,
+        "std": 0.5071
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.3,
+        "std": 0.3162
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.3,
+        "std": 0.3684
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5092,
+        "std": 0.0089
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 0.3667,
+        "std": 0.3994
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 0.5,
+        "std": 0.3273
+      },
+      "full_chain_retention": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 0.7667,
+        "std": 0.32
+      },
+      "full_chain_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.8667,
+        "std": 0.2289
+      },
+      "full_chain_retention": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "answer_acc": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.9333,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.6667,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.6667,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5092,
+        "std": 0.0089
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.2333,
+        "std": 0.2582
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.4,
+        "std": 0.2803
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5092,
+        "std": 0.0089
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 0.6667,
+        "std": 0.244
+      },
+      "full_chain_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 0.6333,
+        "std": 0.2289
+      },
+      "full_chain_retention": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "answer_acc": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.2333,
+        "std": 0.2582
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.4,
+        "std": 0.2803
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5092,
+        "std": 0.0089
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 0.6667,
+        "std": 0.244
+      },
+      "full_chain_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 0.6333,
+        "std": 0.2289
+      },
+      "full_chain_retention": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "answer_acc": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.8667,
+        "std": 0.2289
+      },
+      "full_chain_retention": {
+        "mean": 0.4,
+        "std": 0.5071
+      },
+      "answer_acc": {
+        "mean": 0.4,
+        "std": 0.5071
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.8667,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.8667,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5075,
+        "std": 0.0083
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5075,
+        "std": 0.0083
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 0.7,
+        "std": 0.2535
+      },
+      "full_chain_retention": {
+        "mean": 0.4,
+        "std": 0.5071
+      },
+      "answer_acc": {
+        "mean": 0.4,
+        "std": 0.5071
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 0.6333,
+        "std": 0.2289
+      },
+      "full_chain_retention": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "answer_acc": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5075,
+        "std": 0.0083
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 0.7,
+        "std": 0.2535
+      },
+      "full_chain_retention": {
+        "mean": 0.4,
+        "std": 0.5071
+      },
+      "answer_acc": {
+        "mean": 0.4,
+        "std": 0.5071
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 0.6333,
+        "std": 0.2289
+      },
+      "full_chain_retention": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "answer_acc": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.2,
+        "std": 0.3162
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.1667,
+        "std": 0.3086
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5075,
+        "std": 0.0083
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 0.3333,
+        "std": 0.3086
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 0.4333,
+        "std": 0.3716
+      },
+      "full_chain_retention": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "sliding_window",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 0.6,
+        "std": 0.3381
+      },
+      "full_chain_retention": {
+        "mean": 0.2,
+        "std": 0.414
+      },
+      "answer_acc": {
+        "mean": 0.2,
+        "std": 0.414
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.9333,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.7333,
+        "std": 0.4577
+      },
+      "answer_acc": {
+        "mean": 0.7333,
+        "std": 0.4577
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.8,
+        "std": 0.414
+      },
+      "answer_acc": {
+        "mean": 0.8,
+        "std": 0.414
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5075,
+        "std": 0.0083
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.4333,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.5333,
+        "std": 0.1291
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5075,
+        "std": 0.0083
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 0.5667,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 0.6333,
+        "std": 0.2289
+      },
+      "full_chain_retention": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "answer_acc": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 0.7333,
+        "std": 0.2582
+      },
+      "full_chain_retention": {
+        "mean": 0.4667,
+        "std": 0.5164
+      },
+      "answer_acc": {
+        "mean": 0.4667,
+        "std": 0.5164
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.0,
+      "prereq_retention": {
+        "mean": 0.4333,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 1.5,
+      "prereq_retention": {
+        "mean": 0.5333,
+        "std": 0.1291
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 1.5075,
+        "std": 0.0083
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 2.0,
+      "prereq_retention": {
+        "mean": 0.5667,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 3.0,
+      "prereq_retention": {
+        "mean": 0.6333,
+        "std": 0.2289
+      },
+      "full_chain_retention": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "answer_acc": {
+        "mean": 0.2667,
+        "std": 0.4577
+      },
+      "budget_chain_ratio": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "budget_multiplier": 5.0,
+      "prereq_retention": {
+        "mean": 0.7333,
+        "std": 0.2582
+      },
+      "full_chain_retention": {
+        "mean": 0.4667,
+        "std": 0.5164
+      },
+      "answer_acc": {
+        "mean": 0.4667,
+        "std": 0.5164
+      },
+      "budget_chain_ratio": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "runs": 15
+    }
+  ],
+  "scale_robustness": [
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "budget_control",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "numeric_threshold_control_v2",
+      "regime": "control",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 0.9,
+        "std": 0.207
+      },
+      "full_chain_retention": {
+        "mean": 0.8,
+        "std": 0.414
+      },
+      "answer_acc": {
+        "mean": 0.8,
+        "std": 0.414
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 0.8,
+        "std": 0.2535
+      },
+      "full_chain_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 0.1333,
+        "std": 0.2968
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 0.0667,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 0.1333,
+        "std": 0.2968
+      },
+      "full_chain_retention": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "answer_acc": {
+        "mean": 0.0667,
+        "std": 0.2582
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 0.0667,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 0.6667,
+        "std": 0.244
+      },
+      "full_chain_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 0.6333,
+        "std": 0.2968
+      },
+      "full_chain_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 0.6667,
+        "std": 0.244
+      },
+      "full_chain_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_profile_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 0.6333,
+        "std": 0.2968
+      },
+      "full_chain_retention": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "answer_acc": {
+        "mean": 0.3333,
+        "std": 0.488
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.7333,
+        "std": 0.4577
+      },
+      "answer_acc": {
+        "mean": 0.7333,
+        "std": 0.4577
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "dsgc_no_graph",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "frozen",
+      "method": "retrieval_only",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "full_chain_retention": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "answer_acc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 0.5667,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "dsgc_no_graph",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 0.5667,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "total_blocks": 20,
+      "prereq_retention": {
+        "mean": 0.5667,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    },
+    {
+      "template": "opaque_role_target_v2",
+      "regime": "target",
+      "encoder_type": "sentence",
+      "method": "retrieval_only",
+      "total_blocks": 50,
+      "prereq_retention": {
+        "mean": 0.5667,
+        "std": 0.1759
+      },
+      "full_chain_retention": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "answer_acc": {
+        "mean": 0.1333,
+        "std": 0.3519
+      },
+      "budget_chain_ratio": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "runs": 15
+    }
+  ],
+  "opaque_profile_frozen_failures": [
+    {
+      "seed": 3,
+      "chain_block_ranks": {
+        "c1": 10,
+        "c2": 1,
+        "c3": 2
+      },
+      "chain_block_propagation": {
+        "c1": 0.022991,
+        "c2": 0.095935,
+        "c3": 0.0
+      },
+      "top_non_chain_id": "h1",
+      "top_non_chain_score": 0.088885,
+      "displaced_chain_blocks": [
+        "c1"
+      ]
+    },
+    {
+      "seed": 8,
+      "chain_block_ranks": {
+        "c1": 6,
+        "c2": 1,
+        "c3": 2
+      },
+      "chain_block_propagation": {
+        "c1": 0.032382,
+        "c2": 0.092593,
+        "c3": 0.0
+      },
+      "top_non_chain_id": "f9",
+      "top_non_chain_score": 0.072649,
+      "displaced_chain_blocks": [
+        "c1"
+      ]
+    },
+    {
+      "seed": 14,
+      "chain_block_ranks": {
+        "c1": 6,
+        "c2": 1,
+        "c3": 2
+      },
+      "chain_block_propagation": {
+        "c1": 0.02656,
+        "c2": 0.110828,
+        "c3": 0.0
+      },
+      "top_non_chain_id": "f3",
+      "top_non_chain_score": 0.096421,
+      "displaced_chain_blocks": [
+        "c1"
+      ]
+    }
+  ]
+}

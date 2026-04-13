@@ -1,0 +1,90 @@
+{
+  "protocol_id": "final_v2_draft",
+  "status": "design_only",
+  "depends_on_postmortem": "docs/final_v1_postmortem.md",
+  "design_doc": "docs/final_v2_design.md",
+  "stage_split": [
+    "calibration",
+    "paper_facing_main_suite"
+  ],
+  "calibration": {
+    "purpose": [
+      "verify true controls",
+      "verify structural targets",
+      "locate DSGC operating range",
+      "choose non-saturated budget and distractor regime"
+    ],
+    "candidate_templates": {
+      "control": [
+        "budget_control",
+        "numeric_threshold_control_v2",
+        "permission_control_v2"
+      ],
+      "target": [
+        "opaque_role_target_v2",
+        "opaque_profile_target_v2"
+      ]
+    },
+    "methods": [
+      "retrieval_only",
+      "dsgc_no_graph",
+      "dsgc"
+    ],
+    "grid": {
+      "seeds": 15,
+      "total_blocks": [
+        20,
+        32
+      ],
+      "budget_multipliers": [
+        1.0,
+        1.5,
+        2.0,
+        3.0,
+        5.0
+      ],
+      "chain_depths": [
+        2,
+        3
+      ],
+      "honeypot_counts": [
+        2,
+        4,
+        6
+      ],
+      "encoders": [
+        "frozen",
+        "sentence"
+      ]
+    },
+    "required_diagnostics": [
+      "chain_block_ranks",
+      "chain_block_scores",
+      "chain_block_propagation",
+      "top_non_chain_score",
+      "top_non_chain_id",
+      "displaced_chain_blocks",
+      "selected_honeypot_count"
+    ]
+  },
+  "main_suite": {
+    "selection_rule": "chosen only from calibration-passing templates and grid settings",
+    "comparators": [
+      "retrieval_only",
+      "dsgc_no_graph",
+      "dsgc"
+    ],
+    "predictions": {
+      "clean_control": "retrieval_only >= 0.90 and dsgc ~= retrieval_only",
+      "graph_mechanism": "dsgc > dsgc_no_graph and dsgc > retrieval_only on chosen targets",
+      "budget_curve": "there exists a non-saturated operating interval where dsgc leads",
+      "depth": "the calibrated depth-3 target remains at least as favorable to dsgc as depth-2",
+      "encoder": "structural targets retain a positive dsgc advantage under sentence"
+    }
+  },
+  "policy": {
+    "no_in_place_patch_of_final_v1": true,
+    "calibration_is_not_headline_evidence": true,
+    "paper_suite_must_be_re_preregistered_after_calibration": true
+  }
+}

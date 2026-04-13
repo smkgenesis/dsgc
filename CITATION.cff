@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "DSGC: Dependency-aware Semantic Garbage Collection"
+message: "If you use this repository, please cite the software artifact and the accompanying paper."
+type: software
+authors:
+  - family-names: "Song"
+    given-names: "Minkyu"
+    alias: "smkgenesis"
+repository-code: "https://github.com/smkgenesis/dsgc"
+license: "MIT"
+version: "0.1.0"
+date-released: "2026-04-14"
+abstract: "Public artifact for the DSGC paper, including the final benchmark, experiment protocols, result files, and manuscript snapshot."
+keywords:
+  - llm agents
+  - memory management
+  - graph memory
+  - retention
+  - benchmark

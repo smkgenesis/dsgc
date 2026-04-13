@@ -1,0 +1,54 @@
+{
+  "paper_headline_protocols": [
+    {
+      "protocol_id": "final_v2_main",
+      "protocol_file": "protocols/final_experiment_v2_main.json",
+      "runner": "src/experiments/run_final_v2_main.py",
+      "outputs": {
+        "raw": "results/final_v2_main_raw.json",
+        "summary": "results/final_v2_main_summary.json",
+        "report": "results/final_v2_main_report.md"
+      }
+    },
+    {
+      "protocol_id": "final_v3_robustness",
+      "protocol_file": "protocols/final_experiment_v3_robustness.json",
+      "runner": "src/experiments/run_final_v3_robustness.py",
+      "outputs": {
+        "raw": "results/final_v3_robustness_raw.json",
+        "summary": "results/final_v3_robustness_summary.json",
+        "report": "results/final_v3_robustness_report.md"
+      }
+    }
+  ],
+  "historical_records": [
+    {
+      "record_id": "final_v1",
+      "protocol_file": "audit/protocols/final_experiment_v1.json",
+      "outputs": {
+        "template_stratified_raw": "audit/results/final_v1_template_stratified_raw.json",
+        "template_stratified_summary": "audit/results/final_v1_template_stratified_summary.json",
+        "graph_ablation_raw": "audit/results/final_v1_graph_ablation_raw.json",
+        "graph_ablation_summary": "audit/results/final_v1_graph_ablation_summary.json",
+        "encoder_sensitivity_raw": "audit/results/final_v1_encoder_sensitivity_raw.json",
+        "encoder_sensitivity_summary": "audit/results/final_v1_encoder_sensitivity_summary.json",
+        "report": "audit/results/final_v1_report.md"
+      },
+      "analysis_docs": [
+        "audit/docs/final_v1_postmortem.md"
+      ]
+    },
+    {
+      "record_id": "final_v2_calibration_pass1",
+      "protocol_file": "audit/protocols/final_experiment_v2_draft.json",
+      "outputs": {
+        "raw": "audit/results/final_v2_calibration_pass1_raw.json",
+        "summary": "audit/results/final_v2_calibration_pass1_summary.json",
+        "report": "audit/results/final_v2_calibration_pass1_report.md"
+      },
+      "analysis_docs": [
+        "audit/docs/final_v2_design.md"
+      ]
+    }
+  ]
+}

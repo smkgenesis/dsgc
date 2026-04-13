@@ -1,0 +1,28 @@
+{
+  "title": "DSGC: Dependency-aware Semantic Garbage Collection",
+  "description": "Public artifact for the DSGC paper, including the final benchmark, experiment protocols, result files, audit trail, and manuscript snapshot.",
+  "creators": [
+    {
+      "name": "Song, Minkyu",
+      "affiliation": "",
+      "orcid": ""
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "llm agents",
+    "memory management",
+    "graph memory",
+    "retention",
+    "benchmark"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/smkgenesis/dsgc",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}

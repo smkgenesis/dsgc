@@ -1,0 +1,49 @@
+{
+  "protocol_id": "final_v3_robustness",
+  "base_protocol": "protocols/final_experiment_v2_main.json",
+  "design_doc": "docs/final_v3_robustness.md",
+  "settings": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "encoders": [
+      "frozen",
+      "sentence"
+    ],
+    "lambda_pi_values": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "budget_curve_values": [
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      5.0
+    ],
+    "scale_total_blocks": [
+      20,
+      50
+    ]
+  },
+  "outputs": {
+    "raw": "results/final_v3_robustness_raw.json",
+    "summary": "results/final_v3_robustness_summary.json",
+    "report": "results/final_v3_robustness_report.md"
+  }
+}

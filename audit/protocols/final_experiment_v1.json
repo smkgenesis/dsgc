@@ -1,0 +1,85 @@
+{
+  "protocol_id": "final_v1",
+  "suite_scope": [
+    "template_stratified",
+    "graph_ablation",
+    "pooled_comparison",
+    "encoder_sensitivity"
+  ],
+  "benchmark_family": "minimal_suite",
+  "templates": {
+    "control": [
+      "budget_control",
+      "permission_control"
+    ],
+    "target": [
+      "opaque_role_target",
+      "opaque_profile_target"
+    ]
+  },
+  "methods": [
+    "sliding_window",
+    "retrieval_only",
+    "dsgc_no_graph",
+    "dsgc"
+  ],
+  "encoder_sensitivity_methods": [
+    "retrieval_only",
+    "dsgc_no_graph",
+    "dsgc"
+  ],
+  "grid": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "total_blocks": [
+      20,
+      32
+    ],
+    "budget_multipliers": [
+      1.0,
+      1.25,
+      1.5
+    ],
+    "chain_depth": 2,
+    "encoders": [
+      "frozen",
+      "sentence"
+    ]
+  },
+  "metrics": {
+    "primary": [
+      "prereq_retention",
+      "full_chain_retention"
+    ],
+    "secondary": [
+      "answer_acc"
+    ],
+    "diagnostic": [
+      "chain_token_mass",
+      "budget_chain_ratio",
+      "selected_block_count",
+      "per_template_failure_count"
+    ]
+  },
+  "predictions": {
+    "control": "retrieval_only ~= dsgc_no_graph ~= dsgc; sliding_window weaker",
+    "target": "dsgc > retrieval_only ~= dsgc_no_graph; sliding_window weakest",
+    "graph_ablation": "removing propagation removes most or all target-template gain",
+    "encoder_sensitivity": "true structural targets retain a DSGC advantage under stronger encoders"
+  },
+  "outputs": {
+    "template_stratified_raw": "results/final_v1_template_stratified_raw.json",
+    "template_stratified_summary": "results/final_v1_template_stratified_summary.json",
+    "graph_ablation_raw": "results/final_v1_graph_ablation_raw.json",
+    "graph_ablation_summary": "results/final_v1_graph_ablation_summary.json",
+    "encoder_sensitivity_raw": "results/final_v1_encoder_sensitivity_raw.json",
+    "encoder_sensitivity_summary": "results/final_v1_encoder_sensitivity_summary.json",
+    "suite_report": "results/final_v1_report.md"
+  },
+  "failure_policy": "see audit/docs/redesign-policy.md"
+}
