@@ -1,5 +1,6 @@
 {
   "title": "DSGC: Dependency-aware Semantic Garbage Collection",
+  "doi": "10.5281/zenodo.19557040",
   "description": "Public artifact for the DSGC paper, including the final benchmark, experiment protocols, result files, audit trail, and manuscript snapshot.",
   "creators": [
     {

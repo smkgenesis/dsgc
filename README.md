@@ -1,5 +1,7 @@
 # DSGC
 
+[![DOI](https://zenodo.org/badge/1209593411.svg)](https://doi.org/10.5281/zenodo.19557040)
+
 This repository is the public artifact for **Dependency-aware Semantic Garbage
 Collection (DSGC)**.
 
@@ -56,6 +58,10 @@ Citation metadata for software archiving is provided in:
 
 - `CITATION.cff`
 - `.zenodo.json`
+
+Archived software DOI:
+
+- `10.5281/zenodo.19557040`
 
 ## Core Source Files
 
