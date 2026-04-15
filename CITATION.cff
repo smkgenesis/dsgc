@@ -7,10 +7,10 @@ authors:
     given-names: "Minkyu"
     alias: "smkgenesis"
 repository-code: "https://github.com/smkgenesis/dsgc"
-doi: "10.5281/zenodo.19557040"
+doi: "10.5281/zenodo.19594955"
 license: "MIT"
-version: "0.1.0"
-date-released: "2026-04-14"
+version: "1.0.0"
+date-released: "2026-04-15"
 abstract: "Public artifact for the DSGC paper, including the final benchmark, experiment protocols, result files, and manuscript snapshot."
 keywords:
   - llm agents
