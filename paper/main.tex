@@ -23,11 +23,11 @@
 \widowpenalty=10000
 \clubpenalty=10000
 \displaywidowpenalty=10000
-\pretocmd{\section}{\Needspace{10\baselineskip}}{}{}
-\pretocmd{\subsection}{\Needspace{12\baselineskip}}{}{}
-\BeforeBeginEnvironment{itemize}{\begin{samepage}\Needspace{7\baselineskip}}
+\pretocmd{\section}{\Needspace{6\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{8\baselineskip}}{}{}
+\BeforeBeginEnvironment{itemize}{\begin{samepage}\Needspace{5\baselineskip}}
 \AfterEndEnvironment{itemize}{\end{samepage}}
-\BeforeBeginEnvironment{enumerate}{\begin{samepage}\Needspace{7\baselineskip}}
+\BeforeBeginEnvironment{enumerate}{\begin{samepage}\Needspace{5\baselineskip}}
 \AfterEndEnvironment{enumerate}{\end{samepage}}
 
 \hypersetup{
@@ -156,7 +156,7 @@ This base-case formulation also keeps the cost structure simple. If there are $N
 \node[propann] at ($(c3)!0.55!(score)+(0,0.35)$) {propagate $r_{c_3}$};
 \end{tikzpicture}
 }
-\caption{DSGC mechanism. A query-relevant downstream block can rescue its immediate prerequisite through one-hop propagation; the policy does not extend to multi-hop propagation.}
+\caption{DSGC mechanism. A query-relevant downstream block can rescue its immediate prerequisite through one-hop propagation; the policy does not extend to multi-hop propagation. This term is not a forward reasoning chain simulator; it is a retention heuristic that helps preserve the immediate prerequisite of a query-facing downstream block.}
 \label{fig:system}
 \end{figure}
 
@@ -164,51 +164,57 @@ This base-case formulation also keeps the cost structure simple. If there are $N
 
 \subsection{Template Families}
 
-The benchmark contains control and target families.
+The benchmark splits into control and target families to separate retrieval-friendly cases from dependency-sensitive ones. In the controls, graph propagation should not matter because the decisive block is already query-facing; in the targets it should matter because the answer depends on a prerequisite block whose structural role is clearer than its surface similarity to the query.
 
-\textbf{Controls.} \texttt{budget\_control} and \texttt{numeric\_threshold\_control\_v2} are retrieval-friendly. They are designed so that the final query directly overlaps with the chain blocks it needs, making graph propagation unnecessary in the clean case. In \texttt{budget\_control}, one block gives a project budget and another gives the approval margin relative to that budget; the final query simply asks whether a proposed cost is allowed. Because the project name, budget quantity, and approval language all reappear in the query, similarity-only retrieval is already enough. \texttt{numeric\_threshold\_control\_v2} plays the same role with threshold-style wording: the decisive numeric rule is itself query-facing, so the benchmark behaves like a standard retrieval problem rather than a dependency-sensitive one. In the redesign phase, a third candidate control (\texttt{permission\_control\_v2}) was rejected because retrieval-only solved it too inconsistently to qualify as a clean control. We keep that rejection in the repository history rather than silently removing it.
+\textbf{Controls.} \texttt{budget\_control} and \texttt{numeric\_threshold\_control\_v2} are deliberately retrieval-friendly: the final query directly overlaps with the chain block carrying the decisive rule. In \texttt{budget\_control}, one block gives a project budget and another the approval margin, and the query asks whether a proposed cost is allowed; project name, budget, and approval language all reappear in the query, so similarity-only retrieval suffices. \texttt{numeric\_threshold\_control\_v2} plays the same role with threshold-style wording. The intended outcome is that DSGC shows no meaningful advantage over retrieval-only. A third candidate (\texttt{permission\_control\_v2}) was rejected during redesign because retrieval-only solved it too inconsistently to qualify as a clean control; we keep the rejection in the repository history rather than silently removing it.
 
-\textbf{Targets.} \texttt{opaque\_role\_target\_v2} and \texttt{opaque\_profile\_target\_v2} are structurally indirect. They require keeping an upstream block whose role is necessary for the answer but not directly favored by similarity alone. In \texttt{opaque\_role\_target\_v2}, the query asks whether a user may delete the backup, so the downstream decision block is query-relevant, the middle mapping block is rescued by one hop, and the oldest assignment block still survives by shared keywords. This makes it the cleanest target: the graph term matters, but the oldest block still gets some lexical help. In \texttt{opaque\_profile\_target\_v2}, by contrast, the query is about direct partner routing while the oldest block only links the service to an intermediate ticket, so that earliest prerequisite receives much weaker direct support and is the first block likely to be displaced under budget pressure. This is why the profile template is the hardest target in the suite and the best place to observe residual one-hop failure. Figure~\ref{fig:target-contrast} illustrates this contrast directly. The final v2 templates were renamed and rebuilt after a postmortem on earlier encoder-sensitive artifacts.
-
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
-\resizebox{0.95\linewidth}{!}{%
 \begin{tikzpicture}[
-  box/.style={draw, rounded corners=3pt, text width=4.75cm, minimum height=0.9cm, align=center, line width=0.4pt, font=\small},
-  qbox/.style={box, fill=green!8},
+  title/.style={font=\small\bfseries},
+  box/.style={draw, rounded corners=3pt, text width=6.0cm, minimum height=1.25cm, align=center, line width=0.4pt, font=\footnotesize, inner sep=3pt},
+  query/.style={box, fill=blue!6, text width=6.0cm},
   nbox/.style={box, fill=white},
-  wbox/.style={box, fill=red!8},
-  midlbl/.style={font=\scriptsize, text=green!40!black, fill=white, inner sep=2pt},
-  midlblf/.style={font=\scriptsize, text=red!50!black, fill=white, inner sep=2pt},
+  gbox/.style={box, fill=green!8},
+  rbox/.style={box, fill=red!8},
+  note/.style={font=\scriptsize, text=green!40!black, fill=white, inner sep=2pt},
+  warn/.style={font=\scriptsize, text=red!55!black, fill=white, inner sep=2pt},
+  arr/.style={-latex, thick},
   dep/.style={-latex, thick, dashed},
 ]
-% === Left panel ===
-\node[font=\small\bfseries] at (-0.3,3.6) {\texttt{opaque\_role\_target\_v2}};
-\node[nbox] (Lc3) at (-0.3,2.7) {$c_3$: Alice $\to$ bundle M\\{\scriptsize shares query keywords}};
-\node[qbox] (Lc2) at (-0.3,1.1) {$c_2$: bundle M $\to$ clearance N\\{\scriptsize one-hop rescue target}};
-\node[nbox] (Lc1) at (-0.3,-0.5) {$c_1$: clearance N $\to$ delete backup\\{\scriptsize shares query keywords}};
+\def\dx{7.4}
+% === Left panel: role ===
+\node[title]  at (0,6.1)  {\texttt{opaque\_role\_target\_v2}};
+\node[query] (Lq) at (0,4.85) {\textbf{Query}\\ ``Can \textcolor{blue!55!black}{\textbf{Alice}} \textcolor{blue!55!black}{\textbf{delete}} the production \textcolor{blue!55!black}{\textbf{backup}}?''};
+\node[nbox] (Lc3) at (0,2.75) {\textbf{$c_3$ \,(downstream)}\\ clearance code N may \textcolor{blue!55!black}{\textbf{delete production backups}}};
+\node[gbox] (Lc2) at (0,0.65) {\textbf{$c_2$ \,(immediate prerequisite)}\\ access bundle M maps to clearance code N};
+\node[nbox] (Lc1) at (0,-1.45){\textbf{$c_1$ \,(older prerequisite)}\\ \textcolor{blue!55!black}{\textbf{Alice}} is assigned access bundle M for the \textcolor{blue!55!black}{\textbf{production backup}} system};
+\draw[arr] (Lq) -- (Lc3);
 \draw[dep] (Lc3) -- (Lc2);
 \draw[dep] (Lc2) -- (Lc1);
-\node[midlbl] at (-0.3,1.9) {rescued via one hop};
-\node[midlbl] at (-0.3,0.3) {survives by shared keywords};
-% === Right panel ===
-\node[font=\small\bfseries] at (7.8,3.6) {\texttt{opaque\_profile\_target\_v2}};
-\node[nbox] (Rc3) at (7.8,2.7) {$c_3$: endpoint X $\to$ ticket Y\\{\scriptsize shares query keywords}};
-\node[qbox] (Rc2) at (7.8,1.1) {$c_2$: ticket Y $\to$ profile Z\\{\scriptsize one-hop rescue target}};
-\node[wbox] (Rc1) at (7.8,-0.5) {$c_1$: profile Z $\to$ partner route\\{\scriptsize no shared query keywords}};
+\node[note] at (0,1.70) {one-hop rescue};
+\node[note] at (0,-0.40) {$c_1$ shares subject \emph{and} decision vocab $\Rightarrow$ usually survives};
+% === Right panel: profile ===
+\node[title]  at (\dx,6.1)  {\texttt{opaque\_profile\_target\_v2}};
+\node[query] (Rq) at (\dx,4.85) {\textbf{Query}\\ ``May the \textcolor{blue!55!black}{\textbf{Nova}} \textcolor{blue!55!black}{\textbf{telemetry}} pipeline send data \textcolor{blue!55!black}{\textbf{directly}} to metrics.\textcolor{blue!55!black}{\textbf{partner}}.example?''};
+\node[nbox] (Rc3) at (\dx,2.75) {\textbf{$c_3$ \,(downstream)}\\ relay profile Y may send \textcolor{blue!55!black}{\textbf{telemetry directly}} to \textcolor{blue!55!black}{\textbf{partner}} endpoints};
+\node[gbox] (Rc2) at (\dx,0.65) {\textbf{$c_2$ \,(immediate prerequisite)}\\ route ticket X maps to relay profile Y};
+\node[rbox] (Rc1) at (\dx,-1.45){\textbf{$c_1$ \,(older prerequisite)}\\ Service \textcolor{blue!55!black}{\textbf{Nova}} is assigned to route ticket X};
+\draw[arr] (Rq) -- (Rc3);
 \draw[dep] (Rc3) -- (Rc2);
 \draw[dep] (Rc2) -- (Rc1);
-\node[midlbl] at (7.8,1.9) {rescued via one hop};
-\node[midlblf] at (7.8,0.3) {often displaced};
-\end{tikzpicture}%
-}
-\caption{Why the two target templates differ. In \texttt{opaque\_role\_target\_v2}, the query about whether a user may delete the backup keeps the downstream decision block relevant, rescues the middle mapping block through one-hop propagation, and still gives the oldest assignment block enough lexical support to survive. In \texttt{opaque\_profile\_target\_v2}, the query about direct partner routing again rescues the middle block, but the oldest service-to-ticket block receives little direct support and is therefore the first block to drop.}
+\node[note] at (\dx,1.70) {one-hop rescue};
+\node[warn] at (\dx,-0.40) {$c_1$ shares subject ID only, no routing vocab $\Rightarrow$ often displaced};
+\end{tikzpicture}
+\caption{Why the role target is easier than the profile target. Both targets share the same functional one-hop retention architecture: a query-facing downstream entry block, an immediate prerequisite rescued by one-hop propagation, and an older prerequisite beyond explicit one-hop rescue. The critical difference lies in the older block. In \texttt{opaque\_role\_target\_v2}, that block still retains substantial residual support through both entity and domain-aligned overlap. In \texttt{opaque\_profile\_target\_v2}, it retains only shallow identifier-level overlap while lacking most of the query's decision-bearing vocabulary about direct partner routing. As a result, rescuing the middle block is often sufficient in the role target but not in the profile target.}
 \label{fig:target-contrast}
 \end{figure}
 
-Each scenario also contains \emph{honeypots}: distractor blocks designed to share some query vocabulary without completing the correct reasoning chain. They are necessary because, without such distractors, the benchmark would collapse into trivial recency or lexical retrieval. The calibration stage varied honeypot count and strength, and the frozen main suite uses the medium-strength setting selected from that calibration.
+\textbf{Targets.} \texttt{opaque\_role\_target\_v2} and \texttt{opaque\_profile\_target\_v2} instantiate the indirect-prerequisite regime. Both follow a three-block pattern: a query-facing downstream block, an immediate prerequisite that can be rescued by one-hop propagation, and an older prerequisite that lies beyond one-hop rescue and must survive on residual lexical support. The two targets differ in how strong that residual support is. In \texttt{opaque\_role\_target\_v2}, the query asks whether a user may delete the production backup; the oldest assignment block still retains meaningful support through the user identity and backup-domain context, so graph propagation is necessary but the oldest block usually survives once the middle block is rescued. In \texttt{opaque\_profile\_target\_v2}, the query is about direct partner routing; the oldest service-to-ticket block lies further from the query's decision-bearing vocabulary and retains only shallow identifier-level overlap, which is why profile is the hardest target in the suite. Figure~\ref{fig:target-contrast} illustrates this contrast directly. The final v2 templates were renamed and rebuilt after a postmortem on earlier encoder-sensitive artifacts.
 
-The resulting four-template suite is intentionally small. The controls establish that the benchmark can behave like ordinary similarity-based retrieval when the decisive rule is query-facing. The targets then isolate the opposite regime: the answer still depends on a short chain, but one prerequisite becomes structurally necessary before it becomes lexically attractive. This control-target symmetry matters more for the paper than raw template count. The point is not to enumerate many superficially different tasks, but to pin down a narrow causal contrast in which one-hop graph bias should matter only in the indirect cases and should disappear in the direct ones.
+Each scenario also contains \emph{honeypots}: distractor blocks designed to share some query vocabulary without completing the correct reasoning chain. Without them the benchmark would collapse into trivial recency or lexical retrieval. The calibration stage varied honeypot count and strength, and the frozen main suite uses the medium-strength setting. Their role is to force competition between structurally necessary prerequisites and lexically plausible but wrong distractors.
+
+The resulting four-template suite is intentionally small. The controls establish that the benchmark can behave like ordinary similarity-based retrieval when the decisive rule is query-facing; the targets isolate the opposite regime, where the answer depends on a short chain but one prerequisite becomes structurally necessary before it becomes lexically attractive. The point is not to enumerate many superficially different tasks but to pin down a narrow causal contrast in which one-hop graph bias should matter only in the indirect cases.
 
 \subsection{Experimental History}
 
@@ -222,7 +228,7 @@ The public codebase preserves the experiment history instead of exposing only th
 \end{enumerate}
 This sequence matters because the paper is not claiming that the first benchmark draft was already correct. The redesign history is part of the scientific record, not an inconvenience to be hidden.
 
-\Needspace{18\baselineskip}
+\Needspace{10\baselineskip}
 \subsection{Frozen Main Suite}
 
 The fixed \texttt{final\_v2\_main} protocol uses:
@@ -237,7 +243,7 @@ The fixed \texttt{final\_v2\_main} protocol uses:
   \item target settings: chain depth 3, 2 honeypots, budget multiplier 2.0.
 \end{itemize}
 
-The primary metric is \texttt{full\_chain\_retention}. We also track prerequisite retention and answer accuracy, but in the final suite answer accuracy is effectively redundant with full-chain retention and is treated as secondary.
+The primary metric is \texttt{full\_chain\_retention}. It is binary: a run scores 1 iff every block in the prerequisite chain is retained under the budget, and 0 otherwise. We also track prerequisite retention and answer accuracy, but in the final suite answer accuracy is effectively redundant with full-chain retention and is treated as secondary.
 
 The preregistered predictions were:
 \begin{enumerate}[leftmargin=1.3em]
@@ -323,7 +329,7 @@ The strongest limitation is scale. Controls remain perfect at 50 total blocks, a
 
 \subsection{Failure Diagnosis}
 
-The codebase records rank and displacement diagnostics for each run. In the three frozen profile-target failures of the main suite, the immediate issue is displacement of the oldest prerequisite block \texttt{c1}. In those failed seeds, \texttt{c2} and \texttt{c3} rank first and second, while \texttt{c1} falls to rank 10, 6, and 6 respectively and is displaced by non-chain blocks. This matters because it grounds the remaining failure in public diagnostics rather than in post hoc speculation.
+The codebase records rank and displacement diagnostics for each run. In the three frozen profile-target failures of the main suite, the immediate issue is displacement of the oldest prerequisite block \texttt{c1}. In those failed seeds, \texttt{c2} and \texttt{c3} rank first and second, while the oldest prerequisite block \texttt{c1} falls to rank 10, 6, and 6 respectively and is displaced by non-chain blocks. This matters because it grounds the remaining failure in public diagnostics rather than in post hoc speculation.
 
 \section{Discussion}
 
@@ -448,11 +454,5 @@ Seed & Chain ranks $(c1,c2,c3)$ & Top non-chain block & Displaced block \\
 \caption{Frozen \texttt{opaque\_profile\_target\_v2} failures from the main suite (3 failures out of 15 seeds).}
 \label{tab:appendix-failures}
 \end{table}
-
-\section{Public Artifact Map}
-
-The public release at \url{https://github.com/smkgenesis/dsgc} is split into headline paper-facing results and historical redesign records. The four headline files cited in the main text live under \path{results/}: \texttt{final\_v2\_main\_summary.json}, \texttt{final\_v2\_main\_report.md}, \texttt{final\_v3\_robustness\_summary.json}, and \texttt{final\_v3\_robustness\_report.md}.
-
-The transparency record referenced in Section~4 is preserved under \path{audit/results/}, \path{audit/docs/}, and \path{audit/protocols/}, including \texttt{final\_v1\_report.md}, \texttt{final\_v2\_calibration\_pass1\_report.md}, \texttt{final\_v1\_postmortem.md}, \texttt{final\_v2\_design.md}, \texttt{final\_experiment\_v1.json}, and \texttt{final\_experiment\_v2\_draft.json}.
 
 \end{document}
